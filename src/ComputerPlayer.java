@@ -9,10 +9,20 @@ public class ComputerPlayer extends GamePlayer {
 	public void move(GameBoard board) {
 		/*
 		 * 
-		 * Enter AI code here
-		 * - Call board.getBoard() to get copy of board's integer array
-		 * - Call super.getID() to get your player's ID number
-		 * - Call board.occupySpace(this, <SPACE NUMBER HERE>) to make your move
+		 * Enter AI code here:
+		 * - To get copy of board's integer array use:
+		 * 		int[] boardArray = board.getBoard();
+		 * 
+		 * 		- Board layout:
+		 * 			0	1	2
+		 * 			3	4	5
+		 * 			6	7	8
+		 * 
+		 * - To get your player's ID number use:
+		 * 		int ID = super.getID();
+		 * 
+		 * - To make your move use:
+		 * 		board.occupySpace(this, <SPACE NUMBER HERE>);
 		 * 
 		 */
 		return;
