@@ -20,7 +20,7 @@ public class GameBoard {
 
 	public String boardToString(ArrayList<GamePlayer> players) {
 		int i;
-		char charBoard[] = { '-', '-', '-', '-', '-', '-', '-', '-', '-' };
+		char charBoard[] = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 		if (players == null) {
 			return null;
 		}
@@ -31,7 +31,7 @@ public class GameBoard {
 				}
 			}
 		}
-		return String.format("%c\t%c\t%c\n%c\t%c\t%c\n%c\t%c\t%c\n", charBoard[0], charBoard[1], charBoard[2],
+		return String.format("\n\t%c\t%c\t%c\n\t%c\t%c\t%c\n\t%c\t%c\t%c\n", charBoard[0], charBoard[1], charBoard[2],
 				charBoard[3], charBoard[4], charBoard[5], charBoard[6], charBoard[7], charBoard[8]);
 	}
 
