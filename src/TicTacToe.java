@@ -7,7 +7,7 @@ public class TicTacToe {
 		ArrayList<GamePlayer> players = new ArrayList<GamePlayer>();
 
 		HumanPlayer p1 = new HumanPlayer('X');
-		HumanPlayer p2 = new HumanPlayer('O');
+		MannyPlayer p2 = new MannyPlayer('O');
 
 		players.add(p1);
 		players.add(p2);
