@@ -6,7 +6,7 @@ public class TicTacToe {
 		GameBoard board = new GameBoard();
 		ArrayList<GamePlayer> players = new ArrayList<GamePlayer>();
 
-		HumanPlayer p1 = new HumanPlayer('X');
+		MannyPlayer p1 = new MannyPlayer('X');
 		MannyPlayer p2 = new MannyPlayer('O');
 
 		players.add(p1);
@@ -19,7 +19,11 @@ public class TicTacToe {
 				if (board.checkForWinner(players) > 0) {
 					System.out.println(board.boardToString(players));
 					System.out.println(player.getSymbol() + " WINS!!");
-					System.exit(0);
+					board.reset();
+				} else if (board.checkForDraw() > 0) {
+					System.out.println(board.boardToString(players));
+					System.out.println("DRAW!!");
+					board.reset();
 				}
 			}
 		}
