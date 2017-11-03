@@ -4,6 +4,14 @@ import java.util.Arrays;
 public class GameBoard {
 	private int board[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
+	public void reset() {
+		int i;
+		for(i = 0;i < 9; i++) {
+			this.board[i] = 0;
+		}
+		return; 
+	}
+	
 	public int occupySpace(GamePlayer player, int space) {
 		if (player == null) {
 			return -1;
@@ -35,6 +43,16 @@ public class GameBoard {
 				charBoard[3], charBoard[4], charBoard[5], charBoard[6], charBoard[7], charBoard[8]);
 	}
 
+	public int checkForDraw() {
+		int i;
+		for(i = 0;i < 9; i++) {
+			if(this.board[i] == 0) {
+				return -1;
+			}
+		}
+		return 1;
+	}
+	
 	public int checkForWinner(ArrayList<GamePlayer> players) {
 		if (players == null) {
 			return -1;
